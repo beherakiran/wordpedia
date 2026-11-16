@@ -1,26 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomePage</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-</head>
-<body>
-    <header class="sticky top-0 z-50 bg-[#211A36] text-white">
-       <nav class="h-20 flex items-center justify-between px-8">
-          <div class="gap-3 items-center flex">
-            <i class="fa-solid fa-book-open text-2xl text-purple-400"></i>
-           <h1 class="font-extrabold text-2xl">Wordpedia</h1>
-          </div>
-          <div class="flex items-center gap-8">
-           <a href="" class="hover:text-purple-300">Home</a>
-           <a href="" class="hover:text-purple-300">My words</a>
-           <a href="" class="hover:text-purple-300">Quiz</a>
-          </div>
-       </nav>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-purple-50">
+    <header class="sticky top-0 z-50 bg-[#002C82] text-white">
+      <nav class="h-20 flex items-center justify-between px-8">
+        <div class="gap-3 items-center flex">
+          <i class="fa-solid fa-book-open text-2xl text-red-400"></i>
+          <h1 class="font-extrabold text-2xl">Wordpedia</h1>
+        </div>
+        <div class="flex items-center gap-8">
+          <a href="" class="hover:text-purple-300">Home</a>
+          <a href="" class="hover:text-purple-300">My words</a>
+          <a href="" class="hover:text-purple-300">Quiz</a>
+        </div>
+      </nav>
     </header>
-</body>
+    <main>
+      <section class="text-center px-6 py-10">
+        <h2
+          class="text-3xl font-bold text-white bg-blue-800 inline-block rounded-lg p-5"
+        >
+          YOUR PERSONAL DICTIONARY
+        </h2>
+        <p class="mt-5">
+          Discover new words, understand their meanings and improve your
+          vocabulary every day.
+        </p>
+        <h3 class="text-3xl mt-2">Build Your Vocabulary,one at a time.</h3>
+      </section>
+
+      <section
+        class="max-w-5xl mx-auto my-4 rounded-xl p-6 my-8 shadow-md bg-white"
+      >
+        <h3 class="text-xl font-bold mb-4">
+          Discover a new word
+        </h3>
+
+        <div
+          class="flex items-center gap-3 border border-gray-300 rounded-lg px-4 py-2"
+        >
+          <i class="fa-solid fa-magnifying-glass text-blue-800"></i>
+
+          <input
+            type="text"
+            placeholder="Search a word..."
+            class="flex-1 outline-none py-2 text-gray-700"
+          />
+
+          <button
+            class="bg-blue-800 text-white px-4 py-1 rounded-lg hover:bg-blue-700"
+          >
+            Search
+          </button>
+        </div>
+
+        <p class="text-sm text-gray-500 mt-3">Example: echo...</p>
+      </section>
+    </main>
+  </body>
 </html>
