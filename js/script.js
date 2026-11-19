@@ -38,6 +38,14 @@ async function searchWord() {
 
     resultContainer.appendChild(phonetic);
 
+    const saveBtn = document.createElement("button");
+    saveBtn.textContent = "save word";
+    saveBtn.className =
+      "mt-3 rounded-lg bg-blue-700 px-5 py-2 text-white hover:bg-blue-800";
+    resultContainer.appendChild(saveBtn);
+
+    saveBtn.addEventListener("click", () => saveWord(result));
+
     const meanings = result.meanings;
     meanings.forEach((meaning) => {
       const pos = document.createElement("h2");
@@ -83,3 +91,15 @@ async function searchWord() {
 }
 
 searchBtn.addEventListener("click", searchWord);
+
+function saveWord(result) {
+  // console.log(result);
+  let savedWords = JSON.parse(localStorage.getItem("savedWords")) || [];
+  const alreadySaved = savedWords.some((item) => item.word === result.word);
+
+  if (alreadySaved) {
+    return;
+  }
+  savedWords.push(result);
+  localStorage.setItem("savedWords", JSON.stringify(savedWords));
+}
