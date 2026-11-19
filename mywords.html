@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Words page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-purple-50">
+    <header class="sticky top-0 z-50 bg-[#002C82] text-white">
+      <nav class="h-20 flex items-center justify-between px-8">
+        <div class="gap-3 items-center flex">
+          <i class="fa-solid fa-book-open text-2xl text-red-400"></i>
+          <h1 class="font-extrabold text-2xl">Wordpedia</h1>
+        </div>
+        <div class="flex items-center gap-8">
+          <a href="index.html" class="hover:text-purple-300">Home</a>
+          <a href="mywords.html" class="font-bold">My words</a>
+          <a href="quiz.html" class="hover:text-purple-300">Quiz</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="mb-6 mt-6 text-center">
+        <h1 class="text-3xl mb-4 font-bold">MY Words</h1>
+        <p>Your personal collection of saved words</p>
+      </div>
+      <section
+        class="flex max-w-5xl mx-auto items-center gap-3 border border-gray-300 rounded-lg px-4 py-2"
+      >
+        <i class="fa-solid fa-magnifying-glass text-blue-800"></i>
+        <input
+          type="text"
+          placeholder="Search your saved word..."
+          class="flex-1 outline-none py-2 text-gray-700"
+        />
+        <button
+          class="bg-blue-800 text-white px-4 py-1 rounded-lg hover:bg-blue-700"
+        >
+          Search
+        </button>
+      </section>
+      <section
+        id="nosavedwords_container"
+        class="max-w-7xl my-8 border border-gray-200 mx-auto shadow-md bg-white rounded-lg"
+      >
+        <div class="text-center space-y-6 py-8" id="savedwordssection ">
+          <i class="fa-solid fa-book-open text-4xl text-red-400"></i>
+          <h2 class="mt-5 text-xl">No Words saved yet !</h2>
+          <p>
+            Your vocabulary collection is waiting to grow. Discover a new word
+            and save it here
+          </p>
+          <a
+            href="index.html"
+            class="rounded-lg text-white bg-blue-900 mb-4 px-4 py-3"
+            >Explore Words</a
+          >
+        </div>
+      </section>
+      <section
+        id="savedwords_container"
+        class="hidden max-w-7xl mx-auto my-8"
+      ></section>
+    </main>
+
+    <footer class="bg-blue-900 text-white mt-8 py-8">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col items-center justify-between gap-5"
+      >
+        <h2 class="text-xl font-bold">
+          <i class="fa-solid fa-book-open text-red-400 mr-2"></i>
+          Wordpedia
+        </h2>
+        <div class="flex gap-6 text-sm text-white">
+          <a href="index.html" class="hover:text-purple-300">Home</a>
+          <a href="mywords.html" class="hover:text-purple-300">My Words</a>
+          <a href="quiz.html" class="hover:text-purple-300">Quiz</a>
+        </div>
+        <p class="text-sm text-gray-400">
+          <i class="fa-regular fa-copyright mr-1"></i>
+          2026 Wordpedia. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

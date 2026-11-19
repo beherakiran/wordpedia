@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-purple-50">
+    <header class="sticky top-0 z-50 bg-[#002C82] text-white">
+      <nav class="h-20 flex items-center justify-between px-8">
+        <div class="gap-3 items-center flex">
+          <i class="fa-solid fa-book-open text-2xl text-red-400"></i>
+          <h1 class="font-extrabold text-2xl">Wordpedia</h1>
+        </div>
+        <div class="flex items-center gap-8">
+          <a href="index.html" class="hover:text-purple-300">Home</a>
+          <a href="mywords.html" class="hover:text-purple-300">My words</a>
+          <a href="quiz.html" class="font-bold">Quiz</a>
+        </div>
+      </nav>
+    </header>
+    <main class="px-4">
+      <div class="text-center mt-7 mb-6">
+        <h2 class="text-3xl font-bold mb-4">Test your vocabulary</h2>
+        <p class="text-gray-600">
+          Challenge yourself and see how many words you remember.
+        </p>
+      </div>
+
+      <section class="grid grid-cols-2 gap-5 mb-8 mx-auto max-w-4xl">
+        <div
+          class="bg-white rounded-xl shadow-md p-5 text-center border border-blue-300"
+        >
+          <i class="fa-solid fa-bookmark text-2xl text-blue-800 mb-2"></i>
+          <h3 class="text-2xl font-bold" id="totalwords">0</h3>
+          <p class="text-gray-500">Saved Words</p>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md p-5 text-center border border-blue-300"
+        >
+          <i class="fa-solid fa-bullseye text-2xl text-green-600 mb-2"></i>
+          <h3 class="text-2xl font-bold" id="accuracy">0 %</h3>
+          <p class="text-gray-500">quiz Accuracy</p>
+        </div>
+      </section>
+
+      <section
+        id="quizcard"
+        class=" hidden bg-white rounded-xl shadow-md border border-purple-100 p-6 sm:p-8 mb-8 max-w-3xl mx-auto"
+      >
+        <h3 class="text-xl font-bold text-gray-900 text-center mb-6">
+          <i class="fa-solid fa-brain text-red-600 mr-2"></i>
+          Vocabulary Quiz
+        </h3>
+
+        <div class="text-center py-6">
+          <div
+            class="bg-yellow-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6"
+          >
+            <i class="fa-solid fa-lightbulb text-3xl text-blue-500"></i>
+          </div>
+
+          <p class="text-gray-500 mb-3">What is the word for this meaning?</p>
+
+          <h2
+            id="question"
+            class="text-xl sm:text-2xl font-semibold text-gray-800 leading-relaxed"
+          >
+          <!-- question -->
+        </h2>
+
+          
+          <p
+            id="answer"
+            class="text-2xl font-bold text-blue-800 mt-6 hidden"
+          > 
+                <!-- Answer -->
+          </p>
+        </div>
+
+        
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mt-2">
+          <button
+            id="revealAnsBtn"
+            class="bg-blue-800 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+          >
+            Reveal Answer
+          </button>
+
+          <button
+            id="knewBtn"
+            class="hidden bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition"
+          >
+            <i class="fa-solid fa-check mr-2"></i>
+            I knew it
+          </button>
+
+          <button
+            id="didntknewBtn"
+            class="hidden bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition"
+          >
+            <i class="fa-solid fa-xmark mr-2"></i>
+            I didn't know
+          </button>
+        </div>
+
+        <p id="Message" class="text-center mt-6 text-gray-500"></p>
+      </section>
+
+    
+      <section
+        id="emptycontainer"
+        class="hidden max-w-3xl mx-auto bg-white rounded-xl shadow-md border border-purple-100 p-8 sm:p-10 text-center mb-10"
+      >
+        <i class="fa-solid fa-book-open text-5xl text-red-400 mb-5"></i>
+
+        <h2 class="text-2xl font-bold mb-3">No Saved Words Yet!</h2>
+
+        <p class="text-gray-500 mb-6">
+          Save some new words before starting your vocabulary quiz.
+        </p>
+
+        <a
+          href="index.html"
+          class="inline-block bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition"
+        >
+          Explore Words
+        </a>
+      </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white mt-8 py-8">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col items-center justify-between gap-5"
+      >
+        <h2 class="text-xl font-bold">
+          <i class="fa-solid fa-book-open text-red-400 mr-2"></i>
+          Wordpedia
+        </h2>
+        <div class="flex gap-6 text-sm text-white">
+          <a href="index.html" class="hover:text-purple-300">Home</a>
+          <a href="mywords.html" class="hover:text-purple-300">My Words</a>
+          <a href="quiz.html" class="hover:text-purple-300">Quiz</a>
+        </div>
+        <p class="text-sm text-gray-400">
+          <i class="fa-regular fa-copyright mr-1"></i>
+          2026 Wordpedia. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
