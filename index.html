@@ -54,10 +54,12 @@
             type="text"
             placeholder="Search a word..."
             class="flex-1 outline-none py-2 text-gray-700"
+            id="searchInput"
           />
 
           <button
             class="bg-blue-800 text-white px-4 py-1 rounded-lg hover:bg-blue-700"
+            id="searchBtn"
           >
             Search
           </button>
@@ -65,6 +67,8 @@
 
         <p class="text-sm text-gray-500 mt-3">Example: echo...</p>
       </section>
+
+      <div id="resultContainer" class="mt-7 max-w-2xl mx-auto"> </div>
 
       <section class="grid grid-cols-2 gap-6 max-w-4xl mx-auto my-10 px-4">
         <div
@@ -104,24 +108,25 @@
         <a href="quiz.html" class="text-lg text-blue-800">Go To Quiz →</a>
       </section>
     </main>
-     <footer class="bg-blue-900 text-white mt-8 py-8">
-        <div
-          class="max-w-7xl mx-auto px-6 flex flex-col  items-center justify-between gap-5"
-        >
-          <h2 class="text-xl font-bold">
-            <i class="fa-solid fa-book-open text-red-400 mr-2"></i>
-            Wordpedia
-          </h2>
-          <div class="flex gap-6 text-sm text-white">
-            <a href="index.html" class="hover:text-purple-300">Home</a>
-            <a href="mywords.html" class="hover:text-purple-300">My Words</a>
-            <a href="quiz.html" class="hover:text-purple-300">Quiz</a>
-          </div>
-          <p class="text-sm text-gray-400">
-            <i class="fa-regular fa-copyright mr-1"></i>
-            2026 Wordpedia. All rights reserved.
-          </p>
+    <footer class="bg-blue-900 text-white mt-8 py-8">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col items-center justify-between gap-5"
+      >
+        <h2 class="text-xl font-bold">
+          <i class="fa-solid fa-book-open text-red-400 mr-2"></i>
+          Wordpedia
+        </h2>
+        <div class="flex gap-6 text-sm text-white">
+          <a href="index.html" class="hover:text-purple-300">Home</a>
+          <a href="mywords.html" class="hover:text-purple-300">My Words</a>
+          <a href="quiz.html" class="hover:text-purple-300">Quiz</a>
         </div>
-      </footer>
+        <p class="text-sm text-gray-400">
+          <i class="fa-regular fa-copyright mr-1"></i>
+          2026 Wordpedia. All rights reserved.
+        </p>
+      </div>
+    </footer>
   </body>
+  <script src="js/script.js"></script>
 </html>
