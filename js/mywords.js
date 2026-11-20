@@ -54,6 +54,7 @@ searchInput.addEventListener("input", (e) => {
 
 //display card
 function displayCard(words) {
+  words.sort((a, b) => a.word.localeCompare(b.word));
   words.forEach((item) => {
     let card = document.createElement("div");
     card.className =

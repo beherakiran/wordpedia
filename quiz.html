@@ -54,7 +54,7 @@
 
       <section
         id="quizcard"
-        class=" hidden bg-white rounded-xl shadow-md border border-purple-100 p-6 sm:p-8 mb-8 max-w-3xl mx-auto"
+        class="hidden bg-white rounded-xl shadow-md border border-purple-100 p-6 sm:p-8 mb-8 max-w-3xl mx-auto"
       >
         <h3 class="text-xl font-bold text-gray-900 text-center mb-6">
           <i class="fa-solid fa-brain text-red-600 mr-2"></i>
@@ -68,25 +68,20 @@
             <i class="fa-solid fa-lightbulb text-3xl text-blue-500"></i>
           </div>
 
-          <p class="text-gray-500 mb-3">What is the word for this meaning?</p>
+          <p class="text-gray-500 mb-3" id="questioninstruction">What is the word for this meaning?</p>
 
           <h2
             id="question"
-            class="text-xl sm:text-2xl font-semibold text-gray-800 leading-relaxed"
+            class="text-xl sm:text-2xl font-semibold text-gray-800"
           >
-          <!-- question -->
-        </h2>
+            <!-- question -->
+          </h2>
 
-          
-          <p
-            id="answer"
-            class="text-2xl font-bold text-blue-800 mt-6 hidden"
-          > 
-                <!-- Answer -->
+          <p id="answer" class="text-2xl font-bold text-blue-800 mt-6 hidden">
+            <!-- Answer -->
           </p>
         </div>
 
-        
         <div class="flex flex-col sm:flex-row justify-center gap-4 mt-2">
           <button
             id="revealAnsBtn"
@@ -110,12 +105,19 @@
             <i class="fa-solid fa-xmark mr-2"></i>
             I didn't know
           </button>
+
+          <button
+            id="nextWordBtn"
+            class="hidden bg-purple-700 text-white px-6 py-3 rounded-lg hover:bg-purple-800 transition"
+          >
+            Next Word
+            <i class="fa-solid fa-arrow-right ml-2"></i>
+          </button>
         </div>
 
-        <p id="Message" class="text-center mt-6 text-gray-500"></p>
+        <p id="message" class="text-center mt-6 text-gray-500"></p>
       </section>
 
-    
       <section
         id="emptycontainer"
         class="hidden max-w-3xl mx-auto bg-white rounded-xl shadow-md border border-purple-100 p-8 sm:p-10 text-center mb-10"
@@ -156,5 +158,6 @@
         </p>
       </div>
     </footer>
+    <script src="js/quiz.js"></script>
   </body>
 </html>

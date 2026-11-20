@@ -3,6 +3,12 @@ const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 const resultContainer = document.getElementById("resultContainer");
 
+searchInput.addEventListener("input", () => {
+  if (searchInput.value.trim() === "") {
+    resultContainer.innerHTML = "";
+  }
+});
+
 async function searchWord() {
   const word = searchInput.value.trim();
 
@@ -98,8 +104,30 @@ function saveWord(result) {
   const alreadySaved = savedWords.some((item) => item.word === result.word);
 
   if (alreadySaved) {
+    alert("Word already exists!");
     return;
   }
   savedWords.push(result);
   localStorage.setItem("savedWords", JSON.stringify(savedWords));
+  updateSavedWordsCount();
+  alert("word Saved Successfully");
 }
+
+//accuracy and saved words
+function updateSavedWordsCount() {
+  let savedWords = JSON.parse(localStorage.getItem("savedWords")) || [];
+  document.getElementById("homeTotalwords").textContent = savedWords.length;
+}
+
+updateSavedWordsCount();
+
+const totalAttempts = localStorage.getItem("totalAttempt") || 0;
+const correctAnswers = localStorage.getItem("correctAnswer") || 0;
+
+let accuracy = 0;
+
+if (totalAttempts > 0) {
+  accuracy = Math.round((correctAnswers / totalAttempts) * 100);
+}
+
+document.getElementById("homeAccuracy").textContent = accuracy + "%";
