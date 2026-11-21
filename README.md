@@ -42,6 +42,20 @@ https://api.dictionaryapi.dev/api/v2/entries/en/
 
 No backend installation is required.
 
+## Live Demo 
+[Visit Wordpedia](https://wordpedia-coral.vercel.app/)
+
+## Screenshots
+
+### Home Page
+![Home Page](screenshots/homepage.png)
+
+### My Words
+![My Words](screenshots/mywordspage.png)
+
+### Quiz
+![Quiz](screenshots/quizpage.png)
+
 ## What I Learned
 
 - Working with external APIs using JavaScript.
