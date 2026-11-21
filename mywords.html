@@ -13,18 +13,18 @@
     />
   </head>
   <body class="bg-purple-50">
-    <header class="sticky top-0 z-50 bg-[#002C82] text-white">
-      <nav class="h-20 flex items-center justify-between px-8">
-        <div class="gap-3 items-center flex">
-          <i class="fa-solid fa-book-open text-2xl text-red-400"></i>
-          <h1 class="font-extrabold text-2xl">Wordpedia</h1>
+    <header class="sticky top-0 z-50 bg-[#002C82] text-white pb-1">
+      <nav class=" min-h-16 md:h-20 flex flex-col sm:flex-row items-center justify-between gap-3 px-4 sm:px-6 md:px-8">
+        <div class="gap-2 sm:gap-3 items-center flex">
+          <i class="fa-solid fa-book-open text-xl sm:text-2xl text-red-400"></i>
+          <h1 class="font-extrabold text-xl sm:text-2xl">Wordpedia</h1>
         </div>
-        <div class="flex items-center gap-8">
+        <div class="flex items-center gap-5 sm:gap-6 md:gap-8 text-sm sm:text-base">
           <a href="index.html" class="hover:text-purple-300">Home</a>
           <a href="mywords.html" class="font-bold">My words</a>
           <a href="quiz.html" class="hover:text-purple-300">Quiz</a>
         </div>
-      </nav>
+      </nav>                
     </header>
     <main>
       <div class="mb-6 mt-6 text-center">
@@ -32,7 +32,7 @@
         <p>Your personal collection of saved words</p>
       </div>
       <section
-        class="flex max-w-5xl mx-auto items-center gap-3 border border-gray-300 rounded-lg px-4 py-2"
+        class="flex max-w-5xl sm:mx-5 lg:mx-auto items-center gap-3 border border-gray-300 rounded-lg px-4 py-2"
       >
         <i class="fa-solid fa-magnifying-glass text-blue-800"></i>
         <input
@@ -71,20 +71,20 @@
       > </section>
     </main>
 
-    <footer class="bg-blue-900 text-white mt-8 py-8">
+     <footer class="bg-blue-900 text-white mt-8 py-8">
       <div
-        class="max-w-7xl mx-auto px-6 flex flex-col items-center justify-between gap-5"
+        class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center justify-between gap-5"
       >
         <h2 class="text-xl font-bold">
           <i class="fa-solid fa-book-open text-red-400 mr-2"></i>
           Wordpedia
         </h2>
-        <div class="flex gap-6 text-sm text-white">
+        <div class="flex flex-wrap justify-center gap-5 sm:gap-6 text-sm text-white">
           <a href="index.html" class="hover:text-purple-300">Home</a>
           <a href="mywords.html" class="hover:text-purple-300">My Words</a>
           <a href="quiz.html" class="hover:text-purple-300">Quiz</a>
         </div>
-        <p class="text-sm text-gray-400">
+        <p class="text-sm sm:text-base text-center text-gray-400">
           <i class="fa-regular fa-copyright mr-1"></i>
           2026 Wordpedia. All rights reserved.
         </p>
