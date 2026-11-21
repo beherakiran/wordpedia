@@ -14,12 +14,12 @@
   </head>
   <body class="bg-purple-50">
     <header class="sticky top-0 z-50 bg-[#002C82] text-white">
-      <nav class="h-20 flex items-center justify-between px-8">
-        <div class="gap-3 items-center flex">
-          <i class="fa-solid fa-book-open text-2xl text-red-400"></i>
-          <h1 class="font-extrabold text-2xl">Wordpedia</h1>
+      <nav class=" min-h-16 md:h-20 flex flex-col sm:flex-row items-center justify-between gap-3 px-4 sm:px-6 md:px-8">
+        <div class="gap-2 sm:gap-3 items-center flex">
+          <i class="fa-solid fa-book-open text-xl sm:text-2xl text-red-400"></i>
+          <h1 class="font-extrabold text-xl sm:text-2xl">Wordpedia</h1>
         </div>
-        <div class="flex items-center gap-8">
+        <div class="flex items-center gap-5 sm:gap-6 md:gap-8 text-sm sm:text-base">
           <a href="index.html" class="font-bold">Home</a>
           <a href="mywords.html" class="hover:text-purple-300">My words</a>
           <a href="quiz.html" class="hover:text-purple-300">Quiz</a>
@@ -27,9 +27,9 @@
       </nav>
     </header>
     <main>
-      <section class="text-center px-6 py-10">
+      <section class="text-center px-4 sm:px-6 py-10 sm:py-12 md:py-14">
         <h2
-          class="text-3xl font-bold text-white bg-blue-800 inline-block rounded-lg p-5"
+          class="text-2xl sm:text-3xl md:text:4xl font-bold text-white bg-blue-800 inline-block rounded-lg px-4 sm:px-5 py-4"
         >
           YOUR PERSONAL DICTIONARY
         </h2>
@@ -37,13 +37,13 @@
           Discover new words, understand their meanings and improve your
           vocabulary every day.
         </p>
-        <h3 class="text-3xl mt-2">Build Your Vocabulary,one at a time.</h3>
+        <h3 class="text-3xl mt-2 font-semibold">Build Your Vocabulary,one at a time.</h3>
       </section>
 
       <section
-        class="max-w-5xl mx-auto my-4 rounded-xl p-6 my-8 shadow-md bg-white"
+        class="max-w-5xl my-4 sm:my-8 rounded-xl p-4 sm:p-6 my-6 shadow-md bg-white mx-4 sm:mx-8 lg:mx-auto"
       >
-        <h3 class="text-xl font-bold mb-4">Discover a new word</h3>
+        <h3 class="text-lg sm:text-xl font-bold mb-4">Discover a new word</h3>
 
         <div
           class="flex items-center gap-3 border border-gray-300 rounded-lg px-4 py-2"
@@ -58,7 +58,7 @@
           />
 
           <button
-            class="bg-blue-800 text-white px-4 py-1 rounded-lg hover:bg-blue-700"
+            class="bg-blue-800 text-white px-4 py-1 rounded-lg hover:bg-blue-700 transition"
             id="searchBtn"
           >
             Search
@@ -68,9 +68,9 @@
         <p class="text-sm text-gray-500 mt-3">Example: echo...</p>
       </section>
 
-      <div id="resultContainer" class="mt-7 max-w-2xl mx-auto"> </div>
+      <div id="resultContainer" class="mt-7 max-w-2xl mx-auto px-4 sm:px-6"> </div>
 
-      <section class="grid grid-cols-2 gap-6 max-w-4xl mx-auto my-10 px-4">
+      <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto my-10 px-4 sm:px-6">
         <div
           class="bg-white rounded-xl shadow-md border border-purple-100 p-6 flex items-center gap-5"
         >
@@ -99,29 +99,29 @@
       </section>
 
       <section
-        class="bg-white max-w-6xl shadow-md border border-blue-400 p-6 rounded-xl px-5 mx-auto my-8"
+        class="bg-white max-w-6xl shadow-md border border-blue-400 p-6 sm:p-8 rounded-xl mx-4  sm:mx-6 px-5 lg:mx-auto my-8"
       >
         <h4 class="text-3xl font-bold mb-3">Ready to Practice?</h4>
         <p class="text-gray-500 mb-3">
           Test how well you remember your saved words
         </p>
-        <a href="quiz.html" class="text-lg text-blue-800">Go To Quiz →</a>
+        <a href="quiz.html" class="text-base sm:text-lg text-blue-800 font-semibold">Go To Quiz →</a>
       </section>
     </main>
     <footer class="bg-blue-900 text-white mt-8 py-8">
       <div
-        class="max-w-7xl mx-auto px-6 flex flex-col items-center justify-between gap-5"
+        class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center justify-between gap-5"
       >
         <h2 class="text-xl font-bold">
           <i class="fa-solid fa-book-open text-red-400 mr-2"></i>
           Wordpedia
         </h2>
-        <div class="flex gap-6 text-sm text-white">
+        <div class="flex flex-wrap justify-center gap-5 sm:gap-6 text-sm text-white">
           <a href="index.html" class="hover:text-purple-300">Home</a>
           <a href="mywords.html" class="hover:text-purple-300">My Words</a>
           <a href="quiz.html" class="hover:text-purple-300">Quiz</a>
         </div>
-        <p class="text-sm text-gray-400">
+        <p class="text-sm sm:text-base text-center text-gray-400">
           <i class="fa-regular fa-copyright mr-1"></i>
           2026 Wordpedia. All rights reserved.
         </p>

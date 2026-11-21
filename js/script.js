@@ -23,8 +23,12 @@ async function searchWord() {
       `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`,
     );
 
-    if (!response.ok) {
+    if (response.status === 404) {
       throw new Error("Word not found");
+    }
+
+    if (!response.ok) {
+      throw new Error("Server error. Please try again later.");
     }
 
     const data = await response.json();
@@ -97,6 +101,12 @@ async function searchWord() {
 }
 
 searchBtn.addEventListener("click", searchWord);
+
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    searchWord();
+  }
+});
 
 function saveWord(result) {
   // console.log(result);
